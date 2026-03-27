@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boni Assistência Técnica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<!-- Header fixo -->
+<header class="fixed w-full top-0 z-50 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-white shadow-lg backdrop-blur-sm">
+  <div class="container mx-auto flex justify-between items-center p-4 min-h-20">
+  <a href="/" class="flex items-center gap-3">
+    <img src="logo.png" alt="Logo Boni Assistência Técnica" 
+         class="h-16 md:h-20 w-auto drop-shadow-lg hover:scale-105 transition-transform duration-300" />
+  </a>
+
+
+    <!-- Navegação desktop -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="#servicos" class="hover:text-yellow-400 transition">Serviços</a>
+      <a href="#localizacao" class="hover:text-yellow-400 transition">Localização</a>
+      <a href="#contato" class="hover:text-yellow-400 transition">Contato</a>
+    </nav>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5519981156172" target="_blank"
+   class="bg-green-600 px-4 py-2 rounded-lg shadow hover:bg-green-700 transition hidden md:inline-flex items-center gap-2 animate-pulse">
+  <i data-feather="message-circle"></i>
+  <span>WhatsApp</span>
+</a>
+
+    <!-- Menu Mobile -->
+    <style>
+  #mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+  }
+  #mobile-menu.open {
+    max-height: 300px; /* altura suficiente para os links */
+  }
+</style>
+
+
+  <!-- Menu Mobile oculto -->
+  <nav id="mobile-menu" class="hidden bg-blue-800 text-white p-4 flex flex-col gap-2">
+    <a href="#servicos" class="block py-2">Serviços</a>
+    <a href="#localizacao" class="block py-2">Localização</a>
+    <a href="#contato" class="block py-2">Contato</a>
+  </nav>
+</header>
+
+
+
+<!-- Script para ícones e menu mobile -->
+<script>
+  feather.replace();
+
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+</script>
+
+
+
+
+  <!-- Hero -->
+
+<!-- Hero -->
+<section id="hero" class="pt-40 relative h-screen flex items-center justify-center bg-cover bg-center text-white" 
+         style="background-image: url('hero-fundo1.png');">
+  
+  <!-- Overlay escuro para contraste -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+  
+  <!-- Conteúdo central -->
+  <div class="relative z-10 text-center max-w-3xl px-6">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in">
+      Assistência Técnica em Sorocaba
+    </h1>
+    <p class="text-lg md:text-xl mb-8 animate-fade-in delay-200">
+      Panelas eletrônicas • Máquinas de lavar • Microondas
+    </p>
+    
+    <!-- Botões de ação -->
+    <div class="flex flex-col md:flex-row gap-4 justify-center animate-fade-in delay-400">
+      <a href="#servicos" 
+         class="bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg shadow hover:bg-yellow-500 transition">
+        Conheça nossos serviços
+      </a>
+      <a href="https://wa.me/5519981156172" target="_blank"
+         class="bg-green-600 text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-green-700 transition inline-flex items-center gap-2">
+        <i data-feather="message-circle"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-16 container mx-auto px-6">
+  <h2 class="text-4xl font-extrabold text-blue-900 mb-10 text-center">Nossos Serviços</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    
+    <!-- Panelas Eletrônicas -->
+    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition text-center">
+	  <img src="panela.jpg" alt="Panela eletrônica" class="w-32 h-32 mx-auto mb-4 shadow-md transform hover:scale-105 transition duration-300" />
+      <h3 class="text-xl font-semibold text-blue-800 mb-2">Panelas Eletrônicas</h3>
+      <p class="text-gray-700">Manutenção e reparo de panelas elétricas e multifuncionais com garantia.</p>
+	     </div>
+
+    <!-- Máquinas de Lavar -->
+    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition text-center">
+      <img src="maquina.jpg" alt="Máquina de lavar" class="w-32 h-34 mx-auto mb-4 shadow-md transform hover:scale-105 transition duration-300" />
+      <h3 class="text-xl font-semibold text-blue-800 mb-2">Máquinas de Lavar</h3>
+      <p class="text-gray-700">Assistência completa em máquinas de lavar roupas de diversas marcas.</p>
+    </div>
+
+    <!-- Microondas -->
+    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition text-center">
+      <img src="microondas.jpg" alt="Microondas" class="w-32 h-33 mx-auto mb-4 shadow-md transform hover:scale-105 transition duration-300" />
+      <h3 class="text-xl font-semibold text-blue-800 mb-2">Microondas</h3>
+      <p class="text-gray-700">Conserto e manutenção de microondas com qualidade e segurança.</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Localização -->
+<section id="localizacao" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6">
+    
+    <!-- Título com ícone -->
+    <h2 class="text-4xl font-extrabold text-blue-900 mb-6 flex items-center justify-center gap-2">
+      <i data-feather="map-pin" class="w-8 h-8 text-blue-600"></i>
+      Nossa Localização
+    </h2>
+    
+    <!-- Texto explicativo -->
+    <p class="mb-6 text-lg text-gray-700 text-center">
+      Estamos em Sorocaba - São Paulo. 
+    </p>
+	
+	<!-- Layout com mapa + card -->
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+    
+    <!-- Mapa responsivo -->
+    <div class="flex justify-center">
+      <div class="w-full md:w-3/4 lg:w-2/3 aspect-video rounded-xl overflow-hidden shadow-lg">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.1685861021624!2d-47.47516272502508!3d-23.45438265767005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5f50bec0ec69d%3A0x4f7c162926c44dc2!2sR.%20Dirceu%20Am%C3%A9rico%2C%2018%20-%20Parque%20das%20Laranjeiras%2C%20Sorocaba%20-%20SP%2C%2018077-385!5e0!3m2!1spt-BR!2sbr!4v1774528080774!5m2!1spt-BR!2sbr" 
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+	
+	<!-- Card com informações -->
+      <div class="bg-white p-8 rounded-xl shadow-lg text-center md:text-left">
+	   <!-- Endereço -->
+        <h3 class="text-2xl font-semibold text-blue-800 mb-4 flex items-center gap-2">
+          <i data-feather="map" class="w-6 h-6 text-blue-600"></i>
+          Endereço
+        </h3>
+        <p class="text-gray-700 mb-6">
+          Rua Dirceu Américo, 18<br>
+          Parque das Laranjeiras<br>
+          Sorocaba - SP, 18077-385
+        </p>
+        <!-- Horários -->
+        <h3 class="text-2xl font-semibold text-blue-800 mb-4 flex items-center gap-2">
+          <i data-feather="clock" class="w-6 h-6 text-blue-600"></i>
+          Horário de Atendimento
+        </h3>
+        <ul class="text-gray-700 space-y-2">
+          <li class="flex items-center gap-2">
+            <i data-feather="calendar" class="w-5 h-5 text-blue-600"></i>
+            Segunda a Sexta: 9h às 18h
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-feather="calendar" class="w-5 h-5 text-blue-600"></i>
+            Sábado: 9h às 13h
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-feather="x-circle" class="w-5 h-5 text-red-600"></i>
+            Domingo: fechado
+          </li>
+        </ul>
+    
+     <!-- Botões lado a lado -->
+        <div class="mt-6 flex flex-col sm:flex-row gap-4">
+      <a href="https://maps.app.goo.gl/NY1h9M1H7yzgVcVy7" target="_blank"
+         class="flex-1 text-center bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+        Abrir no Google Maps
+		</a>
+		<a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Dirceu+Américo,+18,+Sorocaba,+SP" target="_blank"
+             class="flex-1 text-center bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700 transition">
+            Traçar rota
+          </a>
+    </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+  <!-- Contato -->
+<section id="contato" class="py-20 bg-gray-100 container mx-auto px-6 text-center">
+  <h2 class="text-4xl font-extrabold text-blue-900 mb-12 text-center">Contato</h2>
+  
+  <!-- Telefone -->
+  <p class="text-lg flex justify-center items-center gap-2 mb-4">
+    <i data-feather="phone" class="text-blue-600"></i>
+    <span>Telefone: 19 98115-6172</span>
+  </p>
+  
+  <!-- WhatsApp -->
+  <p class="text-lg flex justify-center items-center gap-2 mb-6">
+    <i data-feather="message-circle" class="text-green-600"></i>
+    <span>WhatsApp: 19 98115-6172</span>
+  </p>
+  
+  <!-- Botão WhatsApp -->
+  <a href="https://wa.me/5519981156172" 
+     target="_blank"
+     class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700 transition mb-4">
+    <i data-feather="message-circle"></i>
+    <span>Fale conosco pelo WhatsApp</span>
+  </a>
+  
+  <!-- Botão Telefone -->
+  <a href="tel:+5519981156172" 
+     target="_blank"
+     class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+    <i data-feather="phone"></i>
+    <span>Ligar agora</span>
+  </a>
+  
+  <p class="mt-6">Entre em contato e agende seu atendimento!</p>
+</section>
+
+<!-- Botões flutuantes -->
+<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50 animate-fade-in">
+  
+  <!-- Botão WhatsApp -->
+  <a href="https://wa.me/5519981156172" 
+	 target="_blank"
+     class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-700 hover:shadow-[0_0_15px_#22c55e] transition animate-bounce fade-in-delay-1">
+    <i data-feather="message-circle"></i>
+    <span>WhatsApp</span>
+  </a>
+  
+  <!-- Botão Telefone -->
+  <a href="tel:+5519981156172" 
+	 target="_blank"
+     class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-blue-700 hover:shadow-[0_0_15px_#2563eb] transition animate-pulse fade-in-delay-2">
+    <i data-feather="phone"></i>
+    <span>Ligar</span>
+  </a>
+</div>
+
+<!-- Script para ativar os ícones -->
+<script>
+  feather.replace();
+</script>
+
+<!-- Estilo customizado para fade-in -->
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in-delay-1 {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+  .fade-in-delay-2 {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+  }
+</style>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white text-center py-6">
+    <p>&copy; 2026 - Boni Assistência Técnica | Sorocaba - SP</p>
+  </footer>
+
+</body>
+</html>
